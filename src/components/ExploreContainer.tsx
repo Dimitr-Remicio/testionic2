@@ -1,16 +1,31 @@
-import './ExploreContainer.css';
+import React, { ReactElement } from "react";
+import "./ExploreContainer.css";
+import { ReactNode } from "react";
+
+// const ExploreContainer: React.FC<ContainerProps> = ({children}) => {
+//   return (
+//     <div id="container">
+//       {children}
+//     </div>
+//   );
+// };
+
+// export default ExploreContainer;
 
 interface ContainerProps {
-  name: string;
+  // name: string;
+  children: React.ReactElement;
 }
 
-const ExploreContainer: React.FC<ContainerProps> = ({ name }) => {
-  return (
-    <div id="container">
-      <strong>{name}</strong>
-      <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-    </div>
-  );
-};
+// type Props = {
+//   children: React.ReactElement,
+// };
+
+const ExploreContainer: React.FC<ContainerProps> = ({ children }) => (
+  <div>
+    {/* <h1>{title}</h1> */}
+    {children}
+  </div>
+);
 
 export default ExploreContainer;
